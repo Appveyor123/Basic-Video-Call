@@ -47,11 +47,9 @@ cd ..
 
 set PackageDIR=OpenVideoCall_Win_v%SDKVersion%
 if not exist %PackageDIR% (
-	 mkdir %PackageDIR%
+  mkdir %PackageDIR%
 )
 cd %PackageDIR%
 mkdir %Machine%
 xcopy /S /I ..\Release\*.* %Machine% /y
 cd ..
-
-7z a -tzip -r OpenVideoCall_Win_v%SDKVersion%(%Machine%).zip release
